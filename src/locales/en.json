@@ -1,0 +1,133 @@
+
+{
+  "header": {
+    "about": "About",
+    "experience": "Experience",
+    "volunteer": "Volunteer Work",
+    "skills": "Skills",
+    "education": "Education",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "repos": "GitHub Repositories",
+    "linkedinPosts": "LinkedIn Posts"
+  },
+  "hero": {
+    "title": "Ghaith Ahmed",
+    "subtitle": "Software Engineer & ERP Developer",
+    "description": "Specializing in Odoo development and delivering innovative solutions that streamline business operations. Passionate about mentoring and empowering the next generation of technologists.",
+    "learnMore": "Learn More",
+    "getInTouch": "Get In Touch",
+    "downloadResume": "Download Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "Ghaith Ahmed is a passionate Software Engineer and ERP Developer, focused on delivering innovative solutions that streamline business operations. With a keen specialization in Odoo development, Ghaith has been instrumental in designing and implementing robust ERP systems, tailored specifically for diverse organizational needs.",
+    "paragraph2": "His journey through technology began during his academic years at the University Of Information Technology and Communications, where he cultivated his competency in frontend and backend web development, alongside UI design.",
+    "paragraph3": "In addition to his technical expertise, Ghaith has made significant contributions as a Google Developer Student Clubs (DSC) Mentor, guiding aspiring student leaders in Iraq and promoting a culture of collaborative learning. His journey reflects a commitment to empowering the next generation of technologists, underpinned by a dedication to innovation and quality-driven excellence in software development.",
+    "professionalSummary": "Professional Summary",
+    "summaryText": "As a Software Engineer and ERP Developer, Ghaith Ahmed brings a wealth of experience in developing scalable business solutions. His tenure as a Google DSC Mentor showcases his leadership within the tech community, demonstrating his commitment to mentoring and empowering others in their tech journeys. With a strong foundation in both software development and team leadership, Ghaith continues to drive impactful change in the field of Information Technology."
+  },
+  "education": {
+    "title": "Education",
+    "university": "University of Information Technology and Communications",
+    "fieldOfStudy": "Field of Study: Information Technology",
+    "description": "During his academic years at the University Of Information Technology and Communications, Ghaith cultivated his competency in frontend and backend web development, alongside UI design, forming the foundation of his technical expertise in software engineering."
+  },
+  "experience": {
+    "title": "Software Developer",
+    "company": "ADVICTS LTD",
+    "period": "September 2023 - Present",
+    "responsibilities": {
+      "1": "Customize Odoo systems utilizing Python and JavaScript to meet client specifications.",
+      "2": "Develop and implement ERP solutions for diverse business requirements.",
+      "3": "Collaborate with teams to ensure successful implementation of software projects."
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "technicalSkills": "Technical Skills",
+    "professionalSkills": "Professional Skills"
+  },
+  "repos": {
+    "title": "GitHub Repositories",
+    "topRepos": "Top Repositories",
+    "latestRepos": "Latest Repositories",
+    "stars": "Stars",
+    "forks": "Forks",
+    "loading": "Loading repositories..."
+  },
+  "linkedinPosts": {
+    "title": "LinkedIn Posts",
+    "description": "Thoughts and insights I've shared with the professional community.",
+    "readMore": "Read More",
+    "viewMore": "View more on LinkedIn"
+  },
+  "footer": {
+    "title": "Ghaith Ahmed",
+    "description": "Software Engineer & ERP Developer specializing in Odoo development and delivering innovative business solutions.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "email": "Email",
+    "rights": "All rights reserved."
+  },
+  "volunteer": {
+    "title": "Volunteer Work",
+    "description": "Contributing to the community and empowering the next generation of technologists.",
+    "googleDSCMentor": "Google DSC Mentor",
+    "googleDSCOrg": "Google DSC - UOITC",
+    "googleDSCPeriod": "August 2022 - Present",
+    "googleDSCResp1": "Mentored aspiring GDSC Leaders, fostering collaboration and learning among students in various tech domains.",
+    "googleDSCResp2": "Provided guidance and support for student-led technology initiatives.",
+    "googleDSCResp3": "Facilitated knowledge-sharing sessions on software development best practices.",
+    "DSCLead": "GDSC Lead",
+    "DSCLeadOrg": "Google DSC - UOITC",
+    "DSCLeadPeriod": "August 2021 - August 2022",
+    "DSCLeadResp1": "Led student initiatives and organized workshops to enhance skillsets in technology and development.",
+    "DSCLeadResp2": "Coordinated community events and technical training sessions.",
+    "DSCLeadResp3": "Built partnerships with local technology companies and educational institutions.",
+    "localGuide": "Local Guide",
+    "localGuideOrg": "Google Map Local Guide",
+    "localGuidePeriod": "January 2018 - Present",
+    "localGuideResp1": "Achieved Local Guide Level 8, contributing valuable local insights to Google Maps.",
+    "localGuideResp2": "Provided reviews, photos, and location information to enhance map accuracy.",
+    "localGuideResp3": "Participated in community events to improve local mapping data."
+  },
+  "certifications": {
+    "title": "Certifications",
+    "viewCertificate": "View Certificate",
+    "odoo18": "Odoo 18 Functional Certification",
+    "odooIssuer": "Odoo",
+    "odooDate": "February 2025",
+    "odooLicenseNumber": "0000584252",
+    "technicalSupport": "Technical Support Fundamentals",
+    "googleIssuer": "Google",
+    "technicalSupportDate": "August 2023",
+    "acceleratorLabs": "Accelerator Labs Certificate",
+    "undpIssuer": "UNDP",
+    "acceleratorLabsDate": "February 2021",
+    "cs50": "CS50",
+    "harvardIssuer": "Harvard University",
+    "cs50Date": "December 2020",
+    "cs50LicenseNumber": "20e435a3-faea-4df9-8ce6-64df1d8ba1a3",
+    "digitalMarketing": "Digital Marketing",
+    "digitalMarketingDate": "January 2019"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Feel free to reach out for collaborations or just a friendly chat.",
+    "contactInfo": "Contact Information",
+    "name": "Name",
+    "yourName": "Your name",
+    "email": "Email",
+    "yourEmail": "Your email",
+    "subject": "Subject",
+    "subjectPlaceholder": "Subject of your message",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "send": "Send Message",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Baghdad, Iraq",
+    "connect": "Connect"
+  }
+}
