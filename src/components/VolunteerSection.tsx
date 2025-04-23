@@ -105,7 +105,8 @@ const VolunteerSection = () => {
           <div className="absolute bottom-0 -left-0.5 w-2 h-2 rounded-full bg-secondary"></div>
         </div>
       </div>
-      <style jsx="true">{`
+      <style>
+        {`
         .rtl-timeline .border-l-4 {
           border-left: none;
           border-right: 4px solid;
@@ -125,7 +126,8 @@ const VolunteerSection = () => {
           margin-left: 0;
           margin-right: 1.25rem;
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };

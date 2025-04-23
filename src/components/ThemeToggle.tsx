@@ -37,12 +37,12 @@ const ThemeToggle = () => {
       pressed={isDarkMode} 
       onPressedChange={toggleTheme}
       aria-label="Toggle dark mode"
-      className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full w-10 h-10 flex items-center justify-center relative group"
+      className="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 flex items-center justify-center relative group"
     >
       {isDarkMode ? (
-        <Moon className="h-5 w-5 text-yellow-300 group-hover:animate-pulse" />
+        <Moon className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-yellow-300 group-hover:animate-pulse" />
       ) : (
-        <Sun className="h-5 w-5 text-yellow-500 group-hover:animate-pulse" />
+        <Sun className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-yellow-500 group-hover:animate-pulse" />
       )}
       <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 dark:bg-gray-700 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
         <code>{isDarkMode ? "dark_mode: true" : "light_mode: true"}</code>

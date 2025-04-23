@@ -4,10 +4,12 @@ import { Button } from "./ui/button";
 import { ArrowDown, FileDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../contexts/LanguageContext";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const HeroSection = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     // Add animation on component mount
@@ -149,27 +151,27 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className={`container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 max-w-6xl relative z-10 ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
-        <div className={`lg:w-1/2 space-y-6 ${isRTL ? 'text-right' : 'text-left'}`}>
-          <div className="code-card-header inline-flex items-center mb-2">
+      <div className={`container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-8 lg:gap-12 max-w-6xl relative z-10 ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
+        <div className={`w-full lg:w-1/2 space-y-3 sm:space-y-4 md:space-y-6 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <div className="code-card-header inline-flex items-center mb-1 sm:mb-2">
             <div className="code-card-dot bg-red-500"></div>
             <div className="code-card-dot bg-yellow-500"></div>
             <div className="code-card-dot bg-green-500"></div>
             <span className="text-xs font-mono ml-2 opacity-70">ghaith_profile.py</span>
           </div>
           
-          <h1 id="hero-title" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight opacity-0 transition-opacity duration-700">
+          <h1 id="hero-title" className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight opacity-0 transition-opacity duration-700 break-words">
             <span className="text-primary dark:text-blue-400 neon-text">
               {t('hero.title')}
             </span>
           </h1>
           
-          <h2 id="hero-subtitle" className="text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300 opacity-0 transition-opacity duration-700 terminal-typing">
+          <h2 id="hero-subtitle" className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300 opacity-0 transition-opacity duration-700 terminal-typing break-words">
             <span className="text-green-600 dark:text-green-500">&gt; </span>
             {t('hero.subtitle')}
           </h2>
           
-          <pre id="hero-description" className="text-sm md:text-md text-gray-600 dark:text-gray-400 max-w-xl code-block overflow-x-auto whitespace-pre-wrap">
+          <pre id="hero-description" className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-400 max-w-full sm:max-w-xl code-block overflow-x-auto whitespace-pre-wrap">
             <span className="comment">/**</span>
             <br />
             <span className="comment"> * {t('hero.description')}</span>
@@ -177,39 +179,42 @@ const HeroSection = () => {
             <span className="comment"> */</span>
           </pre>
           
-          <div id="hero-buttons" className="flex flex-wrap gap-4 pt-4 opacity-0 transition-opacity duration-700">
+          <div id="hero-buttons" className="flex flex-wrap gap-2 pt-2 opacity-0 transition-opacity duration-700">
             <Button
               onClick={scrollToAbout}
-              className="group bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-500 dark:to-blue-700 animate-glow"
+              size={isMobile ? "sm" : "default"}
+              className="group bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-500 dark:to-blue-700 animate-glow text-xs xs:text-sm sm:text-base"
             >
               {t('hero.learnMore')}
-              <ArrowDown className="ml-2 h-4 w-4 group-hover:animate-bounce" />
+              <ArrowDown className="ml-1 h-3 w-3 sm:h-4 sm:w-4 group-hover:animate-bounce" />
             </Button>
             <Button
               variant="outline"
+              size={isMobile ? "sm" : "default"}
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-blue-500 dark:border-blue-400 hover:bg-blue-500/10"
+              className="border-blue-500 dark:border-blue-400 hover:bg-blue-500/10 text-xs xs:text-sm sm:text-base"
             >
               {t('hero.getInTouch')}
             </Button>
             <Button
               onClick={() => window.open("https://drive.google.com/file/d/1uwbxtwS9r4VRcwTIHctj15r5xnZS0fhe/view?usp=sharing", "_blank")}
               variant="secondary"
-              className="bg-green-600 text-white hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600"
+              size={isMobile ? "sm" : "default"}
+              className="bg-green-600 text-white hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-xs xs:text-sm sm:text-base"
             >
-              {t('hero.downloadResume', 'Download Resume')}
-              <FileDown className="ml-2 h-4 w-4" />
+              {isMobile ? t('hero.downloadCV', 'CV') : t('hero.downloadResume', 'Download Resume')}
+              <FileDown className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
             </Button>
           </div>
         </div>
         
-        <div className="lg:w-1/2 flex justify-center">
-          <div id="hero-image" className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl opacity-0 transition-transform duration-700 relative">
+        <div className="lg:w-1/2 w-full flex justify-center mt-6 sm:mt-8 lg:mt-0">
+          <div id="hero-image" className="w-36 h-36 xs:w-48 xs:h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl opacity-0 transition-transform duration-700 relative">
             {/* Terminal dots overlay */}
-            <div className="absolute top-0 left-0 right-0 z-10 bg-gray-900/80 p-2 flex items-center">
-              <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-              <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="absolute top-0 left-0 right-0 z-10 bg-gray-900/80 p-1 sm:p-2 flex items-center">
+              <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full mr-1 sm:mr-2"></div>
+              <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 sm:w-3 sm:h-3 bg-yellow-500 rounded-full mr-1 sm:mr-2"></div>
+              <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full"></div>
             </div>
             
             <img

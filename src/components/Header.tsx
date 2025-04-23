@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
@@ -39,101 +38,99 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-3">
         <div className="flex items-center justify-between">
-          {/* Logo with typing animation */}
-          <div className={`font-bold text-xl text-primary dark:text-blue-400 font-mono flex items-center`}>
+          {/* Logo with typing animation - Made more responsive for small screens */}
+          <div className="font-bold text-sm xs:text-lg sm:text-xl text-primary dark:text-blue-400 font-mono flex items-center">
             <span className="logo-text">
               &gt; GA_
             </span>
             <span className="animate-blink ml-1 hidden">_</span>
           </div>
 
-          {/* Desktop Navigation - FIXED: Removed "hidden lg:flex" to show on all screens */}
-          <div className="flex items-center gap-2">
+          {/* Navigation buttons - Improved layout for small screens */}
+          <div className="flex items-center gap-1 xs:gap-2">
             <Button 
               variant="ghost" 
-              size="icon" 
-              className="focus:outline-none"
+              size="icon"
+              className="focus:outline-none h-7 w-7 xs:h-8 xs:w-8 sm:h-9 sm:w-9 p-1 sm:p-2"
               onClick={toggleMenu}
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+                <X className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-gray-700 dark:text-gray-300" />
               ) : (
-                <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+                <Menu className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-gray-700 dark:text-gray-300" />
               )}
             </Button>
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
-
-          {/* Mobile Menu Button - Now completely removed since we use the same buttons for all screen sizes */}
         </div>
       </div>
 
       {/* Menu (Same for mobile and desktop now) */}
       {isMenuOpen && (
-        <div className="bg-white dark:bg-gray-900 p-4 shadow-lg animate-fade-in">
-          <nav className={`flex flex-col space-y-2 ${isRTL ? 'text-right' : 'text-left'}`}>
+        <div className="bg-white dark:bg-gray-900 p-3 sm:p-4 shadow-lg animate-fade-in">
+          <nav className={`flex flex-col space-y-1 sm:space-y-2 ${isRTL ? 'text-right' : 'text-left'}`}>
             <a
               href="#about"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.about")}
             </a>
             <a
               href="#experience"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.experience")}
             </a>
             <a
               href="#volunteer"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.volunteer")}
             </a>
             <a
               href="#skills"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.skills")}
             </a>
             <a
               href="#education"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.education")}
             </a>
             <a
               href="#certifications"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.certifications")}
             </a>
             <a
               href="#github-repos"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.repos")}
             </a>
             <a
               href="#linkedin-posts"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t('linkedinPosts.title', 'LinkedIn Posts')}
             </a>
             <a
               href="#contact"
-              className="py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
+              className="py-1.5 sm:py-2 text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-mono"
               onClick={() => setIsMenuOpen(false)}
             >
               <span className="text-green-600 dark:text-green-400 mr-1">&gt;</span> {t("header.contact")}

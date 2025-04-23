@@ -11,12 +11,14 @@ import { useLanguage } from "../contexts/LanguageContext";
 const ContactSection = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-  
-  // This is a placeholder function since we won't implement actual form submission
-  const handleSubmit = (e: React.FormEvent) => {
+
+  // Remove form submit handler; we'll open mailto on button click instead
+
+  // Function to handle the mailto link with pre-filled subject and body (optional)
+  const handleSendClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    console.log("Form submitted");
-    alert("Thank you for your message! This is a demo form and doesn't actually send messages.");
+    // Gather form values if needed for a prefilled mailto, but here, just open a blank email
+    window.location.href = `mailto:iamghaiith@gmail.com`;
   };
 
   return (
@@ -36,7 +38,7 @@ const ContactSection = () => {
           <div className="lg:col-span-2">
             <Card>
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit}>
+                <form>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -84,7 +86,7 @@ const ContactSection = () => {
                     />
                   </div>
                   
-                  <Button type="submit">
+                  <Button type="button" onClick={handleSendClick}>
                     {t("contact.send")}
                   </Button>
                 </form>
@@ -191,14 +193,17 @@ const ContactSection = () => {
         </div>
       </div>
       
-      <style jsx="true">{`
+      <style>
+        {`
         .rtl-social-icons {
           display: flex;
           gap: 0.5rem;
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
 
 export default ContactSection;
+
